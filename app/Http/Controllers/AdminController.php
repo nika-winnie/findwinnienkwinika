@@ -14,7 +14,7 @@ class AdminController extends Controller
             $data = $request->input();
 
             if(Auth::attempt(['email' => $data['email'],'password' => $data['password'], 'admin' => 1 ])){
-                //echo 'i am here';exit();
+                Session::put('adminSession', $data['email']);
                 return redirect('/admin/dashboard');
             }else{
 
@@ -24,7 +24,12 @@ class AdminController extends Controller
         return view('admin.admin_login');
     }
 
-    public function dashboard(){
+    public function dashboard(){if(Session::has('adminSession')){
+            // Perform all actions
+        }else{
+            //return redirect()->action('AdminController@login')->with('flash_message_error', 'Please Login');
+            return redirect('/admin')->with('flash_message_error','Please Login to access the page you are looking for');
+        }
         return view('admin.dashboard');
     }
 
