@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,5 +27,10 @@ class AdminController extends Controller
     public function dashboard(){
         return view('admin.dashboard');
     }
-    //
+
+    public function logout(){
+        Session::flush();
+        return redirect('/admin')->with('flash_message_success', 'Logged out successfully.');
+
+    }
 }

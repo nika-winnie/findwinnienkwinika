@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::match(['get','post'], '/admin', [AdminController::class, 'login']);
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
+Route::get('/logout', [AdminController::class, 'logout']);
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
