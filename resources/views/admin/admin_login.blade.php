@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Nika Winnie</title><meta charset="UTF-8" />
+    <title>Find Winnie Nkwinika</title><meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{asset('css/backend_css/bootstrap.min.css')}}" />
     <link rel="stylesheet" href="{{asset('css/backend_css/bootstrap-responsive.min.css')}}"  />

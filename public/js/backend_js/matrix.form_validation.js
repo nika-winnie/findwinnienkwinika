@@ -94,7 +94,7 @@ $(document).ready(function(){
 				number:true
 			},
 			image:{
-				required:true
+				required:false
 			}
 		},
 		errorClass: "help-inline",
@@ -203,7 +203,6 @@ $(document).ready(function(){
 	});
 
 	$("#delCat").click(function(){
-	    alert('test');
 		if(confirm('Are you sure to delete the Category?')){
             return true;
         }
