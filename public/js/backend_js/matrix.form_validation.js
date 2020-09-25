@@ -17,11 +17,11 @@ $(document).ready(function(){
 			}
 		});
 	});
-	
+
 	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
 
 	/*$('select').select2();*/
-	
+
 	// Form Validation
     $("#basic_validate").validate({
 		rules:{
@@ -138,7 +138,7 @@ $(document).ready(function(){
 			$(element).parents('.control-group').addClass('success');
 		}
 	});
-	
+
 	$("#number_validate").validate({
 		rules:{
 			min:{
@@ -164,7 +164,7 @@ $(document).ready(function(){
 			$(element).parents('.control-group').addClass('success');
 		}
 	});
-	
+
 	$("#password_validate").validate({
 		rules:{
 			/*name:{
@@ -202,13 +202,14 @@ $(document).ready(function(){
 		}
 	});
 
-	/*$("#delCat").click(function(){
+	$("#delCat").click(function(){
+	    alert('test');
 		if(confirm('Are you sure to delete the Category?')){
             return true;
         }
         return false;
 	});
-*/
+
 	/*$("#delProduct").click(function(){
 		if(confirm('Are you sure to delete the Product?')){
             return true;
@@ -237,7 +238,7 @@ $(document).ready(function(){
 	    var maxField = 10; //Input fields increment limitation
 	    var addButton = $('.add_button'); //Add button selector
 	    var wrapper = $('.field_wrapper'); //Input field wrapper
-	    var fieldHTML = '<div class="controls field_wrapper" style="margin-left:-2px;"><input type="text" name="sku[]" style="width:120px"/>&nbsp;<input type="text" name="size[]" style="width:120px"/>&nbsp;<input type="text" name="price[]" style="width:120px"/>&nbsp;<input type="text" name="stock[]" style="width:120px"/><a href="javascript:void(0);" class="remove_button" title="Remove field">Remove</a></div>'; //New input field html 
+	    var fieldHTML = '<div class="controls field_wrapper" style="margin-left:-2px;"><input type="text" name="sku[]" style="width:120px"/>&nbsp;<input type="text" name="size[]" style="width:120px"/>&nbsp;<input type="text" name="price[]" style="width:120px"/>&nbsp;<input type="text" name="stock[]" style="width:120px"/><a href="javascript:void(0);" class="remove_button" title="Remove field">Remove</a></div>'; //New input field html
 	    var x = 1; //Initial field counter is 1
 	    $(addButton).click(function(){ //Once add button is clicked
 	        if(x < maxField){ //Check maximum number of input fields
